@@ -6,5 +6,7 @@ body {
 }
 p {
     text-wrap: pretty;  
+  border: 2px solid powderblue;
+  padding: 30px;
 }
 <html>
