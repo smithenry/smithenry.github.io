@@ -8,6 +8,6 @@ p {
     text-wrap: pretty;  
   border: 2px solid powderblue;
   padding: 30px;
-   text-shadow: 3px 3px 1px orange;
+   text-shadow: 3px 3px 3px orange;
 }
 <html>
