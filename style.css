@@ -6,8 +6,7 @@ body {
 }
 p {
     text-wrap: pretty;  
-  border: 2px solid powderblue;
+  border: 2px solid rgb(36, 109, 119);
   padding: 30px;
    text-shadow: 5px 5px #558ABC;
 }
-
