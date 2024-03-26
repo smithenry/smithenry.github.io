@@ -26,6 +26,27 @@
     The content on these linked sites are just random images
      I pulled from my desktop. Nothing special.
   </p>
+
+<html>
+<body>
+    <h1>Exploring the DOM</h1>
+
+    <h2>Count Down: <span id="count">20</span></h2>
+    <button onclick="updateCount()">Next</button>
+
+    <script>
+        var i = 20;
+
+        function updateCount() {
+            i = i - 1;
+            countobj = document.getElementById("count");
+            console.log("Updating object: " + countobj);
+            countobj.innerHTML = "<b>" + i + "</b>";
+        }
+    </script>
+</body>
+</html>
+  
   <center>
   <a href="supervillainarthur.html">Visit supervillainarthur</a>
   <a href="evilarthur.html">Visit evilarthur</a>
