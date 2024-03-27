@@ -22,14 +22,14 @@
   content = "light dark"
 />
   <p align="center">
-    The content on these linked sites are just random images
-     I pulled from my desktop. Nothing special.
+    ***The content on these linked sites are just random images
+     I pulled from my desktop. Nothing special.***
   </p>
 
     <h1>Exploring the DOM</h1>
 
     <h2>Count Down: <span id="count">20</span></h2>
-    <button onclick="updateCount()">Next</button>
+    <button onclick="updateCount()">Click Me</button>
 
     <script>
         var i = 20;
@@ -39,6 +39,9 @@
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
             countobj.innerHTML = "<b>" + i + "</b>";
+            if (i <= 0) { // double "==" is equality comparison
+                countobj.innerHTML = "<b><font size='+10'>KA BLAM!!!</b>";
+            }
         }
     </script>
 
