@@ -1,55 +1,83 @@
-
 <html>
+
 <head>
   <link rel="stylesheet" href="/style.css" type="text/css">
   <title>Henry's Website</title>
 </head>
+
 <body style="font-family: Verdana, sans-serif; margin-left: 10%; margin-right: 10%">
 
   <h1>Welcome to my super duper cool web page!!!</h1>
 
-  <p align="center"> 
-  This page is pretty boring now, <b>but <font size="+2">just <font size="+5">you <font color="#0000FF">wait</font>!</font></font></b>
-  Soon I'll have my hands on the <font color="#FFA500">nuclear launch codes</font> and then this will be the most 
-    impressive website ever. I just now learned how to make font different colors, 
+  <p align="center">
+    This page is pretty boring now, <b>but <font size="+2">just <font size="+5">you <font color="#0000FF">wait</font>!
+        </font>
+      </font></b>
+    Soon I'll have my hands on the <font color="#FFA500">nuclear launch codes</font> and then this will be the most
+    impressive website ever. I just now learned how to make font different colors,
     so I should be able to hack into the <font size="-3"> Pentagon</font> by the end of this assignment no sweat, right?
-  Okay, <font size="+10">ENOUGH <font color="#FFJ000">!</font> <font color="#FF0000">!</font></font>Now enjoy this picture of Tai Lung 
+    Okay, <font size="+10">ENOUGH <font color="#FFJ000">!</font>
+      <font color="#FF0000">!</font>
+    </font>Now enjoy this picture of Tai Lung
     from Kung Fu Panda. </p>
   <center>
-<img src="https://fandomwire.com/wp-content/uploads/2023/12/tai-lung-1024x577.jpg" alt="Tai Lung" width="600" height="350">
-    </center>
- <meta 
-  name    = "color-scheme"
-  content = "light dark"
-/>
+    <img src="https://fandomwire.com/wp-content/uploads/2023/12/tai-lung-1024x577.jpg" alt="Tai Lung" width="600"
+      height="350">
+  </center>
+  <meta name="color-scheme" content="light dark" />
   <p align="center">
     ***The content on these linked sites are just random images
-     I pulled from my desktop. Nothing special.***
+    I pulled from my desktop. Nothing special.***
   </p>
 
-    <h1>Exploring the DOM</h1>
-    <h2>Count Down: <span id="count">20</span></h2>
-    <button onclick="updateCount()">Click Me!</button>
+  <h1>Exploring the DOM</h1>
+  <h2>Count Down: <span id="count">20</span></h2>
+  <button onclick="updateCount()">Click Me!</button>
 
-    <script>
-        var i = 20;
-        var red_intensity = 0;
-        function updateCount() {
-            i = i - 1;
-            document.body.style.backgroundColor = "rgb(" + red_intensity + ", 0, 0)";
-            red_intensity +=15;
-            countobj = document.getElementById("count");
-            console.log("Updating object: " + countobj);
-            countobj.innerHTML = "<b>" + i + "</b>";
-            if (i <= 0) { 
-                countobj.innerHTML = "<b><font size='+10'>KA BLAMMY!!!</b>";
-            }
-        }
-    </script>
+  <script>
+    var i = 20;
+    var red_intensity = 0;
+    function updateCount() {
+      i = i - 1;
+      document.body.style.backgroundColor = "rgb(" + red_intensity + ", 0, 0)";
+      red_intensity += 15;
+      countobj = document.getElementById("count");
+      console.log("Updating object: " + countobj);
+      countobj.innerHTML = "<b>" + i + "</b>";
+      if (i <= 0) {
+        countobj.innerHTML = "<b><font size='+10'>Ka Blammy!!!</b>";
+      }
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <h1>Dom Exploration Pt.2</h1>
+  <h2>Count Down: <span id="count2">6</span></h2>
+  <button onclick="updateCount2()">See what happens if you dare</button>
+  <script>
+    let scaleFactor = 1; // Initial scale factor
+    var h = 6;
+    function updateCount2() {
+      h = h - 1;
+      var countobj = document.getElementById("count2");
+      console.log("Updating object: " + countobj);
+      countobj.innerHTML = "<b>" + h + "</b>";
+      if (h <= 0) {
+        countobj.innerHTML = "<b><font size='-2'>Sorry Bucko, but that's the end of the line &#129312</font></b>";
+        document.getElementById("countButton").disabled = true;
+      }
+      zoomOut(); // zoomOut function after updating count
+    }
+    function zoomOut() {
+      scaleFactor *= 0.95; // Multiply current scale factor by 0.95 
+      document.body.style.transform = `scale(${scaleFactor})`;
+    }
+  </script>
 
   <center>
-  <a href="supervillainarthur.html">Visit supervillainarthur</a>
-  <a href="evilarthur.html">Visit evilarthur</a>
-    </center>
-</body>  
+    <a href="supervillainarthur.html">Visit supervillainarthur</a>
+    <a href="evilarthur.html">Visit evilarthur</a>
+  </center>
+</body>
+
 </html>
