@@ -28,15 +28,16 @@
   </p>
 
     <h1>Exploring the DOM</h1>
-    <h1>Exploring the DOM</h1>
     <h2>Count Down: <span id="count">20</span></h2>
     <button onclick="updateCount()">Click Me!</button>
 
     <script>
         var i = 20;
-
+        var red_intensity = 0;
         function updateCount() {
             i = i - 1;
+            document.body.style.backgroundColor = "rgb(" + red_intensity + ", 0, 0)";
+            red_intensity +=15;
             countobj = document.getElementById("count");
             console.log("Updating object: " + countobj);
             countobj.innerHTML = "<b>" + i + "</b>";
