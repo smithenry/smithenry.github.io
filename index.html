@@ -7,29 +7,30 @@
 
 <body style="font-family: Verdana, sans-serif; margin-left: 10%; margin-right: 10%">
 
-  <h1>Welcome to my super duper cool web page!!!</h1> 
+  <h1>
+    <font color=FF8B00>Welcome to my super duper cool web page!!!</font>
+  </h1>
   <p align="center">
     This page is pretty boring now, <b>but <font size="+2">just <font size="+5">you <font color="#0000FF">wait</font>!
         </font>
       </font></b>
-    Soon I'll have my hands on the <font color="#FFA500">nuclear launch codes</font> and then this will be the most
+    Soon I'll have my hands on the <font color="#15FF00">nuclear launch codes</font> and then this will be the most
     impressive website ever. I just now learned how to make font different colors,
-    so I should be able to hack into the <font size="-3"> Pentagon</font> by the end of this assignment no sweat, right?
-    Okay, <font size="+10">ENOUGH <font color="#FFJ000">!</font>
-      <font color="#FF0000">!</font>
+    so I should be able to hack into the <font size="-3"> Pentagon </font>
+    <font size="+5">( &#129323 shhhhh)</font> by the end of this assignment no sweat, right?
+    Okay, <font size="+10">ENOUGH <font color="#1500FF">!!!</font>
     </font>Now enjoy this picture of Tai Lung
-    from Kung Fu Panda. </p>
+    from Kung Fu Panda.
+  </p>
   <center>
     <img src="https://fandomwire.com/wp-content/uploads/2023/12/tai-lung-1024x577.jpg" alt="Tai Lung" width="600"
       height="350">
   </center>
-  <meta name="color-scheme" content="light dark" />
-  <p align="center">
-    ***The content on these linked sites are just random images
-    I pulled from my desktop. Nothing special.***
-  </p>
 
-  <h1>Exploring the DOM</h1>
+  <h1>
+    <font color=46FF00>Exploring the DOM</font>
+  </h1>
+
   <h2>Count Down: <span id="count">20</span></h2>
   <button onclick="updateCount()">Click Me!</button>
 
@@ -48,13 +49,16 @@
       }
     }
   </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <h1>Dom Exploration Pt.2</h1>
+  <h1>
+    <font color=00C1FF>Dom Exploration Pt.2</font>
+  </h1>
   <h2>Count Down: <span id="count2">6</span></h2>
   <button onclick="updateCount2()">See what happens if you dare</button>
   <script>
-    let scaleFactor = 1; // Initial scale factor
+    let scaleFactor = 1;
     var h = 6;
     function updateCount2() {
       h = h - 1;
@@ -62,21 +66,98 @@
       console.log("Updating object: " + countobj);
       countobj.innerHTML = "<b>" + h + "</b>";
       if (h <= 0) {
-        countobj.innerHTML = "<b><font size='-2'>Sorry Bucko, but that's the end of the line &#129312</font></b>";
+        countobj.innerHTML = "<b><font size='+10'>Whoop-dee-doo Buckeroo! This here's the end of the line &#129312</font></b>";
         document.getElementById("countButton").disabled = true;
       }
       zoomOut(); // zoomOut function after updating count
     }
     function zoomOut() {
-      scaleFactor *= 0.95; // Multiply current scale factor by 0.95 
+      scaleFactor *= 0.95;
       document.body.style.transform = `scale(${scaleFactor})`;
     }
   </script>
+  </head>
 
-  <center>
-    <a href="supervillainarthur.html">Visit supervillainarthur</a>
-    <a href="evilarthur.html">Visit evilarthur</a>
-  </center>
-</body>
+  <body>
+    <style>
+      #carousel {
+        text-align: center;
+        background-color: rgb(100, 195, 255);
+        padding: 10px;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        max-width: 600px;
+        width: 80%;
+      }
+
+      #carousel img {
+        height: 400px;
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+
+      button {
+        background-color: #ff8c00;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px;
+        transition: background-color 0.3s;
+        font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #fffb00;
+      }
+    </style>
+    <h2>
+      <font color="#d500FF">"Fare Thee Well, Miss Carousel"</font>
+    </h2>
+    <p align="center">
+      These are some prints by an early 20th century Japanese woodblock artist named Hasui Kawase that I dig.
+    </p>
+    <div id="carousel">
+      <img id="cimage" height="600" src="" alt="images">
+      <center>
+        <button onclick="prevImage()">Hold up Rewind</button>
+        <button onclick="nextImage()">I can't get enough. Keep Going!</button>
+      </center>
+    </div>
+    <script>
+      var carouselImage = document.getElementById("cimage");
+      var images = [
+        'https://data.ukiyo-e.org/jaodb/images/Kawase_Hasui-Collection_of_Views_of_the_Moto_Hakone_Minami_Mountain_villa-View_of_an_Azalea_Garden_and_Mt_Fuji-00040055-070228-F06.jpg',
+        'https://m.media-amazon.com/images/I/71SNfO47WhL._AC_UF894,1000_QL80_.jpg',
+        'https://panteek.com/Hasui/images/shn400a.jpg',
+        'https://i.etsystatic.com/18641759/r/il/77d1a6/2751072816/il_570xN.2751072816_n9oa.jpg'
+      ];
+      var currentIndex = 0;
+      function updateImage() {
+        carouselImage.src = images[currentIndex];
+      }
+      function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+      }
+      function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+      }
+      updateImage();
+    </script>
+
+
+    <p align="center">
+      <font color="0000CD">***The content on these linked sites are just random images
+        I pulled from my desktop. Nothing special.***</font>
+    </p>
+    <center>
+      <a href="supervillainarthur.html">Visit supervillainarthur</a>
+      <a href="evilarthur.html">Visit evilarthur</a>
+    </center>
+  </body>
 
 </html>
